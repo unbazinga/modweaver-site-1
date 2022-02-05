@@ -1,5 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./static/style.css">
+
 <body>
 <nav>
 <!--<p class="name"><img src="/favicon.png" width="100" height="56.25">modweaver</p>-->
@@ -32,5 +32,4 @@
     </div>
 </div>
 <!-- PAGE CONTENT END -->
-
 </body>
