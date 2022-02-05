@@ -13,8 +13,8 @@
     </div>
 
 </nav>
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the >documentation</p>
+<h1>Welcome to ModWeaver!</h1>
+<p>Here is where you can download mods for the famous <a href="https://spiderheck.com">arachnidheck</a>!</p>
 <style>
     body {
         background-color: #21252b;
