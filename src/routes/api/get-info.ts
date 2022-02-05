@@ -11,7 +11,9 @@ export async function get(): Promise<EndpointOutput> {
     })
     let result = await query;
 
+
     return {
+        // @ts-ignore
         body: result
     };
 }
