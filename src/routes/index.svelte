@@ -27,7 +27,7 @@
             <h2>Welcome to ModWeaver!</h2>
         </div>
         <div class="c">
-            <p>Here is where you can download mods for the famous <a href="https://spiderheck.com">arachnidheck</a>!</p>
+            <p>Here is where you can download mods for the famous <a href="https://spiderheck.com">ArachnidHeck</a>!</p>
         </div>
     </div>
 </div>
