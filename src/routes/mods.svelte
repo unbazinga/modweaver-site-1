@@ -36,7 +36,7 @@
     <title>ModWeaver Mods</title>
 </head>
 <body>
-<script>
+<script lang="ts">
     function mysql() {
         let mysql = require('mysql');
         let sql_password = process.SQL_PASSWORD;
