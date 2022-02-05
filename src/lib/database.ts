@@ -1,4 +1,4 @@
-let mysql = require('mysql');
+import mysql from 'mysql';
 // @ts-ignore
 let sql_password = process.SQL_PASSWORD;
 // @ts-ignore
