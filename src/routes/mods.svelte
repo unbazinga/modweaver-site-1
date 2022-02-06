@@ -1,41 +1,98 @@
-<head>
-    <!--<style>
-        body {
-            background-color: #21252b;
-        }
-        * {
-            color: white;
-        }
-        nav {
-            margin-left: 42.5%;
-            margin-right: 50%;
-            font-size: 15px;
-        }
-        .name {
-            font-weight: bold;
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-        }
-        .c {
-            text-align: center;
-            font-size: 15px;
-        }
-        .flex-container {
-            display: flex;
-        }
+    :global(body) {
+        background-color: #21252b;
+        font-family: 'Open Sans', sans-serif;
+    }
+    * {
+        color: white;
+    }
+    .name {
+        font-weight: bold;
 
-        .flex-container > div {
+    }
+    .c {
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+    }
+    .container {
+        display: inline-block;
+    }
+    .flex-container {
+        display: flex;
+        overflow: hidden;
+        border-radius: 25px;
 
-            margin: 5px;
-            padding: 1px;
-            font-size: 30px;
-        }
-        </style>
-        -->
-    <link rel="stylesheet" href="/style.css">
-    <title>ModWeaver Mods</title>
-</head>
-<body>
+    }
+    .center {
+        align-content: center;
+        justify-content: center;
+    }
+    .flex-container > div {
 
+        margin: 5px;
+        padding: 1px;
+    }
+    .mod-div {
+        display: inline-block;
+        font-size: medium;
+        border-radius: 15px;
+        border: #383c4c;
+
+        background-color: #383c4c;
+    }
+
+</style>
 <h1>Mods</h1>
+<script>
+    export let mods_json = "{\n" +
+        "    \"mods\": \n" +
+        "    {\n" +
+        "        \"0\":\n" +
+        "        {\n" +
+        "\t    \"name\": \"HarderHeck\",\n" +
+        "            \"description\": \"Makes the game much harder\",\n" +
+        "            \"author\": \"Aer\",\n" +
+        "            \"download_url\": \"https://github.com/AerGameChannel/HarderHeck/releases/latest/download/HarderHeck.Mod.dll\"\n" +
+        "        },\n" +
+        "\t\"1\":\n" +
+        "\t{\n" +
+        "\t    \"name\": \"Too Many Explosions\",\n" +
+        "\t    \"description\": \"Replaces all the weapons in game with mines and grenades.\",\n" +
+        "            \"author\": \"Aer\",\n" +
+        "\t    \"download_url\": \"https://github.com/AerGameChannel/TooManyExplosions/releases/latest/download/TooManyExplosions.dll\"\n" +
+        "\t}\n" +
+        "    }\n" +
+        "}"
+    const obj = JSON.parse(mods_json);
+</script>
 
-</body>
+<div id="mods" class="flex-container">
+    {#each Object.values(obj.mods) as mod}
+        <div class="mod-div">
+            <p>  Name: {mod.name}  </p>
+            <p></p>
+            <p>  Description: {mod.description}  </p>
+            <p></p>
+            <p>  Author: {mod.author}  </p>
+            <p></p>
+            <a href={mod.download_url}> ⇓ Download  </a>
+            <script>
+                function download(download_mod)
+                {
+                    window.location.href = download_mod.download_url
+                }
+            </script>
+            <p></p>
+        </div>
+    {/each}
+</div>
+<!--
+--------------------------------
+<br>
+
+Debugging:
+<pre>{JSON.stringify(obj, null, 4)}</pre>
+-->
