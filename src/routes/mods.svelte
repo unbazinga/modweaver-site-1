@@ -36,9 +36,10 @@
 
         margin: 5px;
         padding: 1px;
-        font-size: 30px;
     }
     .mod-div {
+        display: inline-block;
+        font-size: medium;
         background-color: #383c4c;
     }
 </style>
@@ -66,12 +67,15 @@
     const obj = JSON.parse(mods_json);
 </script>
 
-<div id="mods">
+<div id="mods" class="flex-container">
     {#each Object.values(obj.mods) as mod}
         <div class="mod-div">
-            <p>{mod.name}</p>
-            <p>{mod.description}</p>
-            <p>{mod.author}</p>
+            <p>Name: {mod.name}</p>
+            <p></p>
+            <p>Description: {mod.description}</p>
+            <p></p>
+            <p>Author: {mod.author}</p>
+            <p></p>
             <a href={mod.download_url}>Download</a>
         </div>
     {/each}
