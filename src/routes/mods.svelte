@@ -8,11 +8,6 @@
     * {
         color: white;
     }
-    nav {
-        margin-left: 42.5%;
-        margin-right: 50%;
-        font-size: 15px;
-    }
     .name {
         font-weight: bold;
 
@@ -27,6 +22,9 @@
     }
     .flex-container {
         display: flex;
+        overflow: hidden;
+        border-radius: 25px;
+
     }
     .center {
         align-content: center;
@@ -40,8 +38,12 @@
     .mod-div {
         display: inline-block;
         font-size: medium;
+        border-radius: 15px;
+        border: #383c4c;
+
         background-color: #383c4c;
     }
+
 </style>
 <h1>Mods</h1>
 <script>
@@ -70,13 +72,20 @@
 <div id="mods" class="flex-container">
     {#each Object.values(obj.mods) as mod}
         <div class="mod-div">
-            <p>Name: {mod.name}</p>
+            <p>  Name: {mod.name}  </p>
             <p></p>
-            <p>Description: {mod.description}</p>
+            <p>  Description: {mod.description}  </p>
             <p></p>
-            <p>Author: {mod.author}</p>
+            <p>  Author: {mod.author}  </p>
             <p></p>
-            <a href={mod.download_url}>Download</a>
+            <a href={mod.download_url}> ⇓ Download  </a>
+            <script>
+                function download(download_mod)
+                {
+                    window.location.href = download_mod.download_url
+                }
+            </script>
+            <p></p>
         </div>
     {/each}
 </div>
