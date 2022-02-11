@@ -47,25 +47,7 @@
 </style>
 <h1>Mods</h1>
 <script>
-    export let mods_json = "{\n" +
-        "    \"mods\": \n" +
-        "    {\n" +
-        "        \"0\":\n" +
-        "        {\n" +
-        "\t    \"name\": \"HarderHeck\",\n" +
-        "            \"description\": \"Makes the game much harder\",\n" +
-        "            \"author\": \"Aer\",\n" +
-        "            \"download_url\": \"https://github.com/AerGameChannel/HarderHeck/releases/latest/download/HarderHeck.Mod.dll\"\n" +
-        "        },\n" +
-        "\t\"1\":\n" +
-        "\t{\n" +
-        "\t    \"name\": \"Too Many Explosions\",\n" +
-        "\t    \"description\": \"Replaces all the weapons in game with mines and grenades.\",\n" +
-        "            \"author\": \"Aer\",\n" +
-        "\t    \"download_url\": \"https://github.com/AerGameChannel/TooManyExplosions/releases/latest/download/TooManyExplosions.dll\"\n" +
-        "\t}\n" +
-        "    }\n" +
-        "}"
+    export let mods_json = "{\r\n    \"mods\": \r\n    {\r\n        \"0\":\r\n        {\r\n\t    \"name\": \"HarderHeck\",\r\n            \"description\": \"Makes the game much harder\",\r\n            \"author\": \"Aer\",\r\n            \"download_url\": \"https://github.com/AerGameChannel/HarderHeck/releases/latest/download/HarderHeck.Mod.dll\"\r\n        },\r\n\t\"1\":\r\n\t{\r\n\t    \"name\": \"Too Many Explosions\",\r\n\t    \"description\": \"Replaces all the weapons in game with mines and grenades.\",\r\n            \"author\": \"Aer\",\r\n\t    \"download_url\": \"https://github.com/AerGameChannel/TooManyExplosions/releases/latest/download/TooManyExplosions.dll\"\r\n\t},\r\n\t\"2\":\r\n\t{\r\n\t   \"name\": \"NoGravity\",\r\n\t   \"description\": \"Removes gravity.\",\r\n\t   \"author\": \"Exo\",\r\n\t   \"download_url\": \"https://github.com/ExoPlant/NoGravity/releases/latest/download/NoGravity.dll\"\r\n\t}\r\n    }\r\n}"
     const obj = JSON.parse(mods_json);
 </script>
 
