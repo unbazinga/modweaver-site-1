@@ -20,6 +20,11 @@
     .container {
         display: inline-block;
     }
+    .grid-container {
+        display: grid;
+        overflow: hidden;
+        border-radius: 25px;
+    }
     .flex-container {
         display: flex;
         overflow: hidden;
@@ -32,6 +37,14 @@
     }
     .flex-container > div {
 
+        margin: 5px;
+        padding: 1px;
+    }
+    .grid-container > div {
+
+        min-width: 100px;
+        width: auto;
+        max-width: 500px;
         margin: 5px;
         padding: 1px;
     }
@@ -51,7 +64,7 @@
     const obj = JSON.parse(mods_json);
 </script>
 
-<div id="mods" class="flex-container">
+<div id="mods" class="grid-container">
     {#each Object.values(obj.mods) as mod}
         <div class="mod-div">
             <p>  Name: {mod.name}  </p>
