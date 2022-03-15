@@ -1,0 +1,21 @@
+body {
+    background-color: #21252b;
+}
+* {
+    color:white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar 
+{
+    
+}
+.nav-item 
+{
+    padding: 10px;
+}
+.active{
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-style: solid;
+}
