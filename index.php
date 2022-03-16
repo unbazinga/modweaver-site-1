@@ -1,4 +1,6 @@
 <!DOCTYPE php>
+<?php
+include("./includes/navbar.php"); ?>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -10,10 +12,6 @@
     
   <body>
 	<script src="index.js"></script>
-
-    <div id="navbar">
-      <a href="/" class="nav-item">Home</a>
-      <a href="/mods.php" onclick="toMods()" class="nav-item active">Mods</a>
-    </div>
+  <Navbar />
   </body>
 </html>
